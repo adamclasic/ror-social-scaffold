@@ -5,5 +5,20 @@
     <ul class="posts">
       <%= render @posts %>
     </ul>
+    <ul>
+      <li>
+        <% if current_user.pending_friends%>
+          <button> pending Invitation</button>
+        <% elsif current_user.friend_requests %>
+          <%= link_to 'Accept Invitation', accept_friend_request_path(user_id: user.id) %>
+          <%= link_to 'Deny Invitation', deny_friend_request_path(user_id: user.id), method: :delete, data: {confirm: "Are you sure you want to delete this friend request?"} %>
+        <% elsif !current_user.friend?(user) %>
+          <%= link_to 'Add Friend', send_friend_request_path(user_id: user.id) %>
+        <% elsif current_user.friend?(user) %>
+          <%= link_to 'Unfriend User', unfriend_path(user_id: user.id), method: :delete, data: {confirm: "Are you sure you want to unfriend this user?"}  %>
+        
+        <% end %>
+      </li>
+    </ul>
   </article>
 </section>

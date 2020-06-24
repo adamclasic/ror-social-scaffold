@@ -2,8 +2,16 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
-  devise_for :users
+  resources :friendships
+  get 'friends', to: 'friendships#all_friends'
+  get 'send_friend_request', to: 'friendships#send_request'
+  get 'accept_friend_request', to: 'friendships#confirm_request'
+  get 'deny_friend_request', to: 'friendships#reject_request'
+  get 'pending_requests', to: 'friendships#pending_requests'
+  get 'unfriend', to: 'friendships#unfriend'
 
+
+  devise_for :users
   resources :users, only: [:index, :show]
   resources :posts, only: [:index, :create] do
     resources :comments, only: [:create]

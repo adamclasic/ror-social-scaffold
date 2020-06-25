@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature 'Sign in', type: :feature do
   before :each do
-    User.create(email: 'jane@example.com', name: 'jane', password:'password')
+    User.create(email: 'jane@example.com', name: 'jane', password: 'password')
   end
 
   scenario 'Sign in a user' do

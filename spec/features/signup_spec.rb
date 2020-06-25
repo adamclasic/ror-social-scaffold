@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.feature 'Sign up', type: :feature do
-
   scenario 'Sign up a new user' do
     visit new_user_registration_path
     fill_in 'user_name', with: 'jane'

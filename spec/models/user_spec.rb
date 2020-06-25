@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  context "validations" do
+  context 'validations' do
     subject do
-      described_class.new(email:"jane@example.com", name: "Jane", password:"password")
+      described_class.new(email: 'jane@example.com', name: 'Jane', password: 'password')
     end
 
     it 'expects required attributes to be valid' do
@@ -16,23 +16,22 @@ RSpec.describe User, type: :model do
     end
 
     it 'expects name to not be too long' do
-      subject.name = "aa" * 20
+      subject.name = 'aa' * 20
       expect(subject).to_not be_valid
     end
 
     it 'expects user to not be valid without a valid email' do
-      subject.email =" janeexamplecom"
+      subject.email = ' janeexamplecom'
       expect(subject).to_not be_valid
     end
 
-     it 'expects password to not be too short' do
-      subject.password ="aa"
+    it 'expects password to not be too short' do
+      subject.password = 'aa'
       expect(subject).to_not be_valid
     end
-
   end
 
-  context "associations" do
+  context 'associations' do
     it 'should have many posts' do
       t = User.reflect_on_association(:posts)
       expect(t.macro).to eq(:has_many)

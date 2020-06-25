@@ -19,15 +19,8 @@
           <%= link_to 'Unfriend User', unfriend_path(user_id: user.id), method: :delete, data: {confirm: "Are you sure you want to unfriend this user?"}  %>
         <% end %>
         
-<!--
-        <% if current_user.friend?(user)  && user.id != current_user.id%>
-          <%= link_to 'Unfriend User', unfriend_path(user_id: user.id), method: :delete, data: {confirm: "Are you sure you want to unfriend this user?"}  %>
-        <% elsif !current_user.friend?(user)  && user.id != current_user.id%>
-          <%= link_to 'Add Friend', send_friend_request_path(user_id: user.id) %>
-        <% elsif current_user.pending_friends && user.id != current_user.id%>
-          <button> pending Invitation</button>
-        <% end %>
-        -->
+
+        
       </li>
     <% end %>
   </ul>
@@ -37,9 +30,6 @@
     <ul>
       <li> 
         Name: <%= link_to request.name, user_path(request) %> 
-          <!--<%= link_to 'Accept Invitation', accept_friend_request_path(user_id: @user) %>
-          <%= link_to 'Deny Invitation', deny_friend_request_path(user_id: @user), method: :delete, data: {confirm: "Are you sure you want to delete this friend request?"} %>
-      -->
       </li>
     </ul>
 <% end %>

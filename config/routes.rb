@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
-  # resources :friendships
   get 'friends', to: 'friendships#all_friends'
   get 'send_friend_request', to: 'friendships#send_request'
   get 'accept_friend_request', to: 'friendships#confirm_request'

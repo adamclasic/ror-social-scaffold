@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'Sign up', type: :feature do
+RSpec.feature 'Sign in', type: :feature do
   before :each do
     User.create(email: 'jane@example.com', name: 'jane', password:'password')
   end

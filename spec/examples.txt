@@ -1,5 +1,7 @@
 example_id                              | status | run_time        |
 --------------------------------------- | ------ | --------------- |
+./spec/features/signin_spec.rb[1:1]     | passed | 0.73294 seconds |
+./spec/features/signup_spec.rb[1:1]     | passed | 0.8157 seconds  |
 ./spec/models/friendship_spec.rb[1:1:1] | passed | 0.11487 seconds |
 ./spec/models/friendship_spec.rb[1:2:1] | passed | 0.19914 seconds |
 ./spec/models/friendship_spec.rb[1:2:2] | passed | 0.00262 seconds |

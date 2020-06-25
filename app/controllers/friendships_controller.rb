@@ -4,7 +4,7 @@ class FriendshipsController < ApplicationController
         if current_user.send_request(params[:user_id])
             redirect_to users_path, notice: "Friend request sent"
         else
-            flash[:notice] = "something went wrong"
+            flash.now[:notice] = "something went wrong"
         end
     end
 
@@ -12,7 +12,7 @@ class FriendshipsController < ApplicationController
         if current_user.confirm_friend(params[:user_id])
             redirect_to users_path, notice: "Friend request accepted"
         else
-            flash[:notice] = "something went wrong"
+            flash.now[:notice] = "something went wrong"
         end
     end
 
@@ -25,7 +25,7 @@ class FriendshipsController < ApplicationController
     end
 
     def pending_requests
-        @pending_requests = current_user.friend_requests
+        @pending_requests = current_user.pending_friends
     end
 
     def all_friends
@@ -38,7 +38,7 @@ class FriendshipsController < ApplicationController
         if remove_friend.delete
             redirect_to users_path, notice: "Friend removed"
         else
-            flash[:notice] = "something went wrong"
+            flash.now[:notice] = "something went wrong"
         end
     end
 end

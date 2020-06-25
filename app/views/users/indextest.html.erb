@@ -1,0 +1,32 @@
+<section class="users-section">
+  <ul class="users-list">
+    <% @users.each do |user| %>
+      <li>
+        Name: <%= user.name %>
+        <span class="profile-link">
+          <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
+        </span>
+        <% if current_user.pending_friends && user != current_user%>
+          <button> pending Invitation</button>
+        <% elsif current_user.friend_requests && user != current_user%>
+          <%= link_to 'Accept Invitation', accept_friend_request_path(user_id: user.id) %>
+          <%= link_to 'Deny Invitation', deny_friend_request_path(user_id: user.id), method: :delete, data: {confirm: "Are you sure you want to delete this friend request?"} %>
+        <% elsif !current_user.friend?(user)  && user != current_user%>
+          <%= link_to 'Add Friend', send_friend_request_path(user_id: user.id) %>
+        <% elsif current_user.friend?(user)  && user != current_user%>
+          <%= link_to 'Unfriend User', unfriend_path(user_id: user.id), method: :delete, data: {confirm: "Are you sure you want to unfriend this user?"}  %>
+        
+        <% end %>
+        
+      </li>
+    <% end %>
+  </ul>
+
+  <h2>Pending Friend Requests: </h2>
+  <% @pending_requests.each do |request| %>
+    <ul>
+      <li> Name: <%= link_to request.name, user_path(request) %> </li>
+    </ul>
+<% end %>
+
+</section>

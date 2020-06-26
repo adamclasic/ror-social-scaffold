@@ -36,5 +36,6 @@ class FriendshipsController < ApplicationController
     inverse_friend = Friendship.find_by(user_id: current_user.id, friend_id: params[:user_id])
     friend&.delete
     inverse_friend&.delete
-    redirect_to users_path 
+    redirect_to users_path, notice: 'Friend deleted' 
+  end
 end

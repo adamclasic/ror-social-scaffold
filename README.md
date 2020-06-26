@@ -40,9 +40,6 @@
     <a href="https://github.com/adamclasic/ror-social-scaffold/issues">Request Feature</a>
   </p>
 </p>
-## Live Demo
-
-[Live Demo](https://frozen-sea-66202.herokuapp.com/users/sign_in)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -59,6 +56,12 @@
 This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students. 
 
 ![screen](app/assets/images/screenshot.png)
+
+
+## Live Demo
+
+[Live Demo](https://frozen-sea-66202.herokuapp.com/users/sign_in)
+
 <!-- BUILD WITH -->
 ## Built With
 This project was built using these technologies.

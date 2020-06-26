@@ -61,9 +61,24 @@ Open `http://localhost:3000/` in your browser.
 
 TBA
 
+<!-- CONTACT -->
 ## Authors
 
-TBA
+👤 **Brittany Blake**
+
+- Github: [@BrittanyBlake](https://github.com/BrittanyBlake)
+- Twitter: [@bbcodes_](https://twitter.com/bbcodes_)
+- Linkedin: [Brittany Blake](https://www.linkedin.com/in/brittany-blake-843951109/)
+
+👤 **Adam Allalou**
+
+- Github: [@AdamClasic](https://github.com/AdamClasic)
+- Twitter: [@adamallalou](https://twitter.com/adamallalou)
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [Microverse](https://www.microverse.org/)
+* [Ruby on Rails Documentation](https://api.rubyonrails.org)
 
 ## 🤝 Contributing
 

@@ -96,5 +96,5 @@ TBA
 
 ## 📝 License
 
-TBA
+MIT
 

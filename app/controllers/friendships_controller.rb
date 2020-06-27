@@ -32,13 +32,10 @@ class FriendshipsController < ApplicationController
   end
 
   def unfriend
-    user = User.find(params[:user_id])
-    remove_friend = current_user.friendships.find_by_friend_id(user)
-    if remove_friend
-      remove_friend.delete
-      redirect_to users_path, notice: 'Friend removed'
-    else
-      flash.now[:notice] = 'something went wrong'
-    end
+    friend = Friendship.find_by(user_id: params[:user_id], friend_id: current_user.id)
+    inverse_friend = Friendship.find_by(user_id: current_user.id, friend_id: params[:user_id])
+    friend&.delete
+    inverse_friend&.delete
+    redirect_to users_path
   end
 end

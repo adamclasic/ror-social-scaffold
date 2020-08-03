@@ -24,7 +24,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/adamclasic/ror-social-scaffold">
-    <img src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/5726/s300/icon-white-on-murple-copy.png" alt="Logo" width="80" height="80">
+    <img src="app/assets/images/rails.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">RoR-Social-Scaffold</h3>
@@ -131,7 +131,7 @@ Open `http://localhost:3000/` in your browser.
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [Microverse](https://www.microverse.org/)
+* [Odin project](https://www.theodinproject.com/)
 * [Ruby on Rails Documentation](https://api.rubyonrails.org)
 
 ## Show your support
